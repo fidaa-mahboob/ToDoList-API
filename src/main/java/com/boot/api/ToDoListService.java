@@ -39,8 +39,8 @@ public class ToDoListService {
         }
     }
 
-    @PutMapping(path = "/todos/{todoId}")
-    public ResponseEntity<Todo> updateTodoItem( @PathVariable(value = "todoId") Long id, Todo updatedTodo) {
+    @PutMapping(path = "/todos/{id}")
+    public ResponseEntity<Todo> updateTodoItem( @PathVariable(value = "id") Long id, Todo updatedTodo) {
         if(id == null) {
             throw new IllegalArgumentException("ID Error: ID must be not Null");
         }
