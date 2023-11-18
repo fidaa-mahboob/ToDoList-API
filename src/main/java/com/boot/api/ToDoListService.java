@@ -22,7 +22,7 @@ public class ToDoListService {
         return ResponseEntity.ok(newTodoTask);
     }
 
-    @GetMapping("todos")
+    @GetMapping("/todos")
     public ResponseEntity<List<Todo>> FetchAllToDoItems() {
         return ResponseEntity.ok(todoRepository.findAll());
     }
